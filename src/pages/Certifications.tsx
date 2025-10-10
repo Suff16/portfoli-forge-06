@@ -2,44 +2,86 @@ import { Award } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
-const Certifications = () => {
+const CertificationsPage = () => {
   const certifications = [
     {
-      name: "AWS Certified Developer - Associate",
-      issuer: "Amazon Web Services",
-      date: "2023",
-      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&h=300&fit=crop",
+      name: "Pemograman Dart",
+      issuer: "Dicoding Indonesia",
+      date: "2025",
+      image: "src/assets/certification/dart.png", 
+      verifyUrl: "https://www.dicoding.com/certificates/07Z6JL8VJXQR", 
     },
     {
-      name: "Google Cloud Professional Developer",
-      issuer: "Google Cloud",
-      date: "2023",
-      image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=400&h=300&fit=crop",
+      name: "Membuat Aplikasi Fluter",
+      issuer: "Dicoding Indonesia",
+      date: "2025",
+      image: "src/assets/certification/flutter pemula.png",
+      verifyUrl: "https://www.dicoding.com/certificates/GRX5JK2LKX0M", 
     },
     {
-      name: "Meta React Developer Certificate",
-      issuer: "Meta (Facebook)",
-      date: "2022",
-      image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=300&fit=crop",
+      name: "Fundamental Flutter",
+      issuer: "Dicoding Indonesia",
+      date: "2025",
+      image: "src/assets/certification/fundamental-flutter.png",
+      verifyUrl: "https://www.h=300&fit=cropdicoding.com/certificates/GRX5J9RNYX0M",
     },
     {
-      name: "Flutter Development Bootcamp",
-      issuer: "The App Brewery",
-      date: "2022",
-      image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop",
+      name: "Machine Learning dengan Flutter",
+      issuer: "Dicoding Indonesia",
+      date: "2025",
+      image: "src/assets/certification/machine-learning.png",
+      verifyUrl: "https://www.dicoding.com/certificates/GRX5J2W2KX0M", 
     },
     {
-      name: "MongoDB Certified Developer",
-      issuer: "MongoDB University",
-      date: "2021",
-      image: "https://images.unsplash.com/photo-1544256718-3bcf237f3974?w=400&h=300&fit=crop",
+      name: "Fundamental Express js",
+      issuer: "Codepolitan",
+      date: "2024",
+      image: "src/assets/certification/express.png",
+      verifyUrl: "https://codepolitan.com/c/VBX8IG2",
     },
     {
-      name: "Node.js Application Development",
-      issuer: "Linux Foundation",
-      date: "2021",
-      image: "https://images.unsplash.com/photo-1537432376769-00f5c2f4c8d2?w=400&h=300&fit=crop",
+      name: "Fundamental Mongo Db",
+      issuer: "Codepolitan",
+      date: "2024",
+      image: "src/assets/certification/mongodb.png",
+      verifyUrl: "https://codepolitan.com/c/NPX8KZH",
     },
+    {
+      name: "Belajar Git dan Github",
+      issuer: "Dicoding Indonesia",
+      date: "2025",
+      image: "src/assets/certification/git-github.png",
+      verifyUrl: "https://www.dicoding.com/certificates/L4PQ8NRRVZO1",
+    },
+    {
+      name: "Structured Query Language (SQL)",
+      issuer: "Dicoding Indonesia",
+      date: "2025",
+      image: "src/assets/certification/sql.png",
+      verifyUrl: "https://www.dicoding.com/certificates/0LZ0RVYNNP65",
+    },
+    {
+      name: "Fundamental JavaScript",
+      issuer: "Dicoding Indonesia",
+      date: "2024",
+      image: "src/assets/certification/dasar-js.png",
+      verifyUrl: "https://www.dicoding.com/certificates/4EXG7G389PRL",
+    },
+    {
+      name: "Belajar Membuat Front-End Web",
+      issuer: "Dicoding Indonesia",
+      date: "2025",
+      image: "src/assets/certification/frontend-pemula.png",
+      verifyUrl: "https://www.dicoding.com/certificates/0LZ0RJ4RQP65",
+    },
+    {
+      name: "Fundamental Front-End Web",
+      issuer: "Dicoding Indonesia",
+      date: "2025",
+      image: "src/assets/certification/fundamental-frontend.png",
+      verifyUrl: "https://www.dicoding.com/certificates/KEXL7DV00XG2",
+    }
+    
   ];
 
   return (
@@ -61,12 +103,16 @@ const Certifications = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {certifications.map((cert, index) => (
-              <div
+              // Seluruh kartu sekarang dibungkus dengan link <a>
+              <a 
                 key={index}
-                className="group bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 animate-fade-in"
+                href={cert.verifyUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block bg-card border border-border rounded-3xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-46 overflow-hidden">
                   <img
                     src={cert.image}
                     alt={cert.name}
@@ -91,7 +137,7 @@ const Certifications = () => {
                     </span>
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
@@ -102,4 +148,4 @@ const Certifications = () => {
   );
 };
 
-export default Certifications;
+export default CertificationsPage;

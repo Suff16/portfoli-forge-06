@@ -1,7 +1,7 @@
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "./ui/button";
 import heroBackground from "@/assets/hero-bg.jpg";
-import profileImage from "@/assets/profile.jpg";
+import profileImage from "@/assets/formal.jpg";
 
 const Hero = () => {
   return (
@@ -22,15 +22,13 @@ const Hero = () => {
           {/* Left Content */}
           <div className="flex-1 text-center lg:text-left animate-fade-in">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
-              <span className="block text-foreground">Hi, I'm a</span>
-              <span className="block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-glow">
-                Full-Stack Developer
+              <span className="block text-foreground">Yusuf Saputrah</span>
+              <span className="block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+                Pengembang Web & Mobile App
               </span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
-              Web Developer & Mobile App Developer specializing in modern web technologies
-              and cross-platform mobile solutions. Building innovative digital experiences
-              for clients worldwide.
+              Spesialisasi membangun aplikasi web dan aplikasi mobile multi platform-app dengan Flutter.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
@@ -69,7 +67,7 @@ const Hero = () => {
                 <Linkedin className="h-6 w-6 text-foreground group-hover:text-primary" />
               </a>
               <a
-                href="mailto:your.email@example.com"
+                href="mailto:yusufsaputrah003@gmail.com"
                 className="p-3 rounded-full bg-card hover:bg-primary/20 transition-colors border border-border hover:border-primary group"
               >
                 <Mail className="h-6 w-6 text-foreground group-hover:text-primary" />

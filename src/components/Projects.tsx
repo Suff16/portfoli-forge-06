@@ -4,18 +4,18 @@ import { Button } from "./ui/button";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with payment integration, real-time inventory, and admin dashboard.",
-      image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+      title: "LokaPandu",
+      description: "Full-stack aplikasi memberikan referensi destinasi wisata hidden gems terintegrasi dengan AI Chatbot.",
+      image: "src/assets/project/Loka.png",
+      technologies: ["Flutter", "Supabase", "LLM Gemini Chat", "Provider Bloc"],
       liveUrl: "#",
       githubUrl: "#",
     },
     {
-      title: "Task Management App",
-      description: "Cross-platform mobile app for team collaboration with real-time sync and push notifications.",
-      image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&h=600&fit=crop",
-      technologies: ["Flutter", "Firebase", "Dart"],
+      title: "Food Recognizer App",
+      description: "Aplikasi Flutter dengan model ML untuk mengenali suatu makanan. Melalui pemberian gambar, aplikasi mampu mengidentifikasi jenis makanan tersebut dengan akurasi yang tinggi.",
+      image: "src/assets/project/recognizer_food.png",
+      technologies: ["Flutter", "Firebase", "Gemini Api","ML Kit","Image Picker","Provider"],
       liveUrl: "#",
       githubUrl: "#",
     },

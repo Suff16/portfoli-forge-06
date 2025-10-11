@@ -3,8 +3,8 @@ import { ExternalLink, Github } from "lucide-react";
 import { Button } from "./ui/button";
 import lokaPandu from "../assets/Loka.png";
 import recognizerFood from "../assets/recognizer_food.png";
-import restaurantApp from "../assets/restaurant app.png";
-import vegetaStore from "../assets/vegeta store.png";
+import restaurantApp from "../assets/restaurant-app.png";
+import vegetaStore from "../assets/Vegeta-store.png";
 
 const projects = [
     {

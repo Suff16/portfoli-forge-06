@@ -1,16 +1,16 @@
 import React from 'react';
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "./ui/button";
-import lokaPandu from "src/assets/Loka.png";
-import recognizerFood from "src/assets/recognizer_food.png";
-import restaurantApp from "src/assets/restaurant app.png";
-import vegetaStore from "src/assets/vegeta store.png";
+import lokaPandu from "../assets/Loka.png";
+import recognizerFood from "../assets/recognizer_food.png";
+import restaurantApp from "../assets/restaurant app.png";
+import vegetaStore from "../assets/vegeta store.png";
 
 const projects = [
     {
       title: "LokaPandu",
       description: "Aplikasi full-stack yang memberikan referensi destinasi wisata hidden gems, terintegrasi dengan AI Chatbot.",
-      image: "src/assets/Loka.png",
+      image: lokaPandu, 
       technologies: ["Flutter", "Supabase", "Gemini LLM", "Provider Bloc"],
       liveUrl: "#",
       githubUrl: "https://github.com/Suff16",
@@ -18,7 +18,7 @@ const projects = [
     {
       title: "Food Recognizer App",
       description: "Aplikasi Flutter dengan model ML untuk mengenali makanan dari gambar dengan akurasi tinggi.",
-      image: "src/assets/recognizer_food.png",
+      image: recognizerFood, 
       technologies: ["Flutter", "Firebase", "Gemini API","ML Kit"],
       liveUrl: "#",
       githubUrl: "https://github.com/Suff16",
@@ -26,7 +26,7 @@ const projects = [
     {
       title: "Restaurants App",
       description: "Aplikasi Flutter yang menyediakan informasi lengkap tentang restoran, dari menu, ulasan, hingga lokasi.",
-      image: "src/assets/restaurant app.png",
+      image: restaurantApp, 
       technologies: ["Flutter", "Firebase", "Google Maps API", "Provider"],
       liveUrl: "#",
       githubUrl: "#",
@@ -34,7 +34,7 @@ const projects = [
     {
       title: "Vegeta Store",
       description: "Platform e-commerce lengkap untuk menjual sayuran dengan integrasi pembayaran yang aman.",
-      image: "src/assets/vegeta store.png",
+      image: vegetaStore, 
       technologies: ["React", "Node.js", "Express", "MongoDB"],
       liveUrl: "#",
       githubUrl: "https://github.com/Suff16",

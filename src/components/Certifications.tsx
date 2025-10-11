@@ -2,62 +2,70 @@ import React from 'react';
 import { Award, ArrowUpRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import dart from "../assets/dart.png";
+import flutterPemula from "../assets/flutter pemula.png";
+import fundamentalFlutter from "../assets/fundamental-flutter.png";
+import machineLearning from "../assets/machine-learning.png";
+import express from "../assets/express.png";
+import mongodb from "../assets/mongodb.png";
+import gitGithub from "../assets/git-github.png";
+import sql from "../assets/sql.png";
 
 const certifications = [
     {
       name: "Pemrograman Dart",
       issuer: "Dicoding Indonesia",
       date: "2025",
-      image: "src/assets/dart.png", 
+      image: dart, 
       verifyUrl: "https://www.dicoding.com/certificates/07Z6JL8VJXQR", 
     },
     {
       name: "Membuat Aplikasi Flutter untuk Pemula", // Judul diperpanjang untuk tes
       issuer: "Dicoding Indonesia",
       date: "2025",
-      image: "src/assets/flutter pemula.png",
+      image: flutterPemula,
       verifyUrl: "https://www.dicoding.com/certificates/GRX5JK2LKX0M", 
     },
     {
       name: "Fundamental Flutter",
       issuer: "Dicoding Indonesia",
       date: "2025",
-      image: "src/assets/fundamental-flutter.png",
+      image: fundamentalFlutter,
       verifyUrl: "https://www.dicoding.com/certificates/GRX5J9RNYX0M",
     },
     {
       name: "Machine Learning dengan Flutter",
       issuer: "Dicoding Indonesia",
       date: "2025",
-      image: "src/assets/machine-learning.png",
+      image: machineLearning,
       verifyUrl: "https://www.dicoding.com/certificates/GRX5J2W2KX0M", 
     },
     {
       name: "Fundamental Express.js",
       issuer: "Codepolitan",
       date: "2024",
-      image: "src/assets/express.png",      
+      image: express,      
       verifyUrl: "https://codepolitan.com/c/VBX8IG2",
     },
     {
       name: "Fundamental MongoDB",
       issuer: "Codepolitan",
       date: "2024",
-      image: "src/assets/mongodb.png",
+      image: mongodb, 
       verifyUrl: "https://codepolitan.com/c/NPX8KZH",
     },
     {
       name: "Belajar Git dan Github",
       issuer: "Dicoding Indonesia",
       date: "2025",
-      image: "src/assets/git-github.png",
+      image: gitGithub,
       verifyUrl: "https://www.dicoding.com/certificates/L4PQ8NRRVZO1",
     },
     {
       name: "Structured Query Language (SQL)",
       issuer: "Dicoding Indonesia",
       date: "2025",
-      image: "src/assets/sql.png",
+      image: sql,
       verifyUrl: "https://www.dicoding.com/certificates/0LZ0RVYNNP65",
     },
 ];

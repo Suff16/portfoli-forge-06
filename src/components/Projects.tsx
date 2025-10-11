@@ -1,6 +1,10 @@
 import React from 'react';
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "./ui/button";
+import lokaPandu from "src/assets/Loka.png";
+import recognizerFood from "src/assets/recognizer_food.png";
+import restaurantApp from "src/assets/restaurant app.png";
+import vegetaStore from "src/assets/vegeta store.png";
 
 const projects = [
     {

@@ -22,7 +22,7 @@ const Navigation = () => {
     { name: "Beranda", path: "/" },
     { name: "Proyek Unggulan", path: "/#projects" },
     { name: "Timeline", path: "/#timeline" },
-    { name: "Sertifikasi", path: "/certifications" },
+    { name: "Sertifikasi", path: "/#certifications" },
     { name: "Kontak", path: "/#contact" },
   ];
 

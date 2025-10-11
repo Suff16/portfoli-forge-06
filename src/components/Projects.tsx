@@ -6,7 +6,7 @@ const Projects = () => {
     {
       title: "LokaPandu",
       description: "Full-stack aplikasi memberikan referensi destinasi wisata hidden gems terintegrasi dengan AI Chatbot.",
-      image: "src/assets/project/Loka.png",
+      image: "src/assets/Loka.png",
       technologies: ["Flutter", "Supabase", "LLM Gemini Chat", "Provider Bloc"],
       liveUrl: "#",
       githubUrl: "https://github.com/Suff16",
@@ -14,7 +14,7 @@ const Projects = () => {
     {
       title: "Food Recognizer App",
       description: "Aplikasi Flutter dengan model ML untuk mengenali suatu makanan. Melalui pemberian gambar, aplikasi mampu mengidentifikasi jenis makanan tersebut dengan akurasi yang tinggi.",
-      image: "src/assets/project/recognizer_food.png",
+      image: "src/assets/recognizer_food.png",
       technologies: ["Flutter", "Firebase", "Gemini Api","ML Kit","Image Picker","Provider"],
       liveUrl: "#",
       githubUrl: "https://github.com/Suff16",
@@ -22,7 +22,7 @@ const Projects = () => {
     {
       title: "Restaurants App",
       description: "Aplikasi Flutter yang menyediakan informasi lengkap tentang restoran, termasuk menu, ulasan, dan lokasi. Pengguna dapat menemukan restoran favorit mereka dan memesan makanan dengan mudah.",
-      image: "src/assets/project/restaurant app.png",
+      image: "src/assets/restaurant app.png",
       technologies: ["Flutter", "Firebase", "Google Maps API", "Provider"],
       liveUrl: "#",
       githubUrl: "#",
@@ -38,7 +38,7 @@ const Projects = () => {
     {
       title: "Vegeta Store",
       description: "Platform e-commerce lengkap untuk menjual sayuran dengan integrasi pembayaran yang aman.",
-      image: "src/assets/project/vegeta store.png",
+      image: "src/assets/vegeta store.png",
       technologies: ["React", "Node.js", "Express", "MongoDB"],
       liveUrl: "#",
       githubUrl: "https://github.com/Suff16",

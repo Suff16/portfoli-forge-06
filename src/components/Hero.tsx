@@ -1,93 +1,73 @@
+import React from 'react';
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "./ui/button";
-import heroBackground from "@/assets/hero-bg.jpg";
 import profileImage from "@/assets/formal.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
+    <section id="home" className="relative w-full min-h-screen flex items-center overflow-hidden pt-28 pb-16 sm:pt-32">
+      
+      {/* Latar Belakang */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroBackground}
-          alt="Developer workspace"
-          className="w-full h-full object-cover opacity-20"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-background via-background to-background/90"></div>
+        {/* PERBAIKAN 1: Opacity dihilangkan dari container dan dipindahkan ke dalam style gradasi */}
+        <div 
+          className="absolute inset-0" 
+          style={{
+            // Warna titik sekarang menggunakan --border dengan alpha channel agar kontrasnya pas di light/dark mode
+            backgroundImage: 'radial-gradient(hsl(var(--border) / 0.1) 1px, transparent 1px)',
+            backgroundSize: '20px 20px',
+          }}
+        ></div>
       </div>
 
-      {/* Content */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-          {/* Left Content */}
-          <div className="flex-1 text-center lg:text-left animate-fade-in">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
-              <span className="block text-foreground">Yusuf Saputrah</span>
-              <span className="block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+      {/* Konten */}
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-y-16 lg:gap-8 items-center">
+          
+          {/* Konten Teks (tidak ada perubahan) */}
+          <div className="lg:col-span-3 text-center lg:text-left">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground animate-fade-in-up [animation-delay:0.2s]">
+              Yusuf Saputrah
+            </h1>
+            <div className="mt-4 mb-6 h-10 sm:h-12">
+              <span className="text-xl sm:text-2xl lg:text-3xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-semibold animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-primary pr-2">
                 Pengembang Web & Mobile App
               </span>
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
-              Memiliki pengalaman dalam membangun aplikasi web dan mobile multi platform-app dengan Flutter.
+            </div>
+            <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-in-up [animation-delay:0.4s]">
+              Membangun aplikasi web dan mobile lintas platform yang modern dan fungsional dengan fokus pada pengalaman pengguna yang luar biasa.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10 animate-fade-in-up [animation-delay:0.6s]">
               <a href="src/assets/cv/CV Yusuf Saputrah.pdf" download="CV Yusuf Saputrah.pdf">
-                <Button
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 text-lg px-8 py-6 group"
-                >
-                  Unduh CV
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <Button size="lg" className="w-full sm:w-auto text-base px-6 py-5 sm:text-lg sm:px-8 sm:py-6 group">
+                  Unduh CV <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </a>
               <a href="#contact">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="text-lg px-8 py-6 border-primary/50 hover:bg-primary/10"
-                >
+                <Button size="lg" variant="outline" className="w-full sm:w-auto text-base px-6 py-5 sm:text-lg sm:px-8 sm:py-6">
                   Hubungi Saya
                 </Button>
               </a>
             </div>
-            
-
-            {/* Social Links */}
-            <div className="flex gap-4 justify-center lg:justify-start">
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-full bg-card hover:bg-primary/20 transition-colors border border-border hover:border-primary group"
-              >
-                <Github className="h-6 w-6 text-foreground group-hover:text-primary" />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-full bg-card hover:bg-primary/20 transition-colors border border-border hover:border-primary group"
-              >
-                <Linkedin className="h-6 w-6 text-foreground group-hover:text-primary" />
-              </a>
-              <a
-                href="mailto:yusufsaputrah003@gmail.com"
-                className="p-3 rounded-full bg-card hover:bg-primary/20 transition-colors border border-border hover:border-primary group"
-              >
-                <Mail className="h-6 w-6 text-foreground group-hover:text-primary" />
-              </a>
+            <div className="flex gap-4 justify-center lg:justify-start animate-fade-in-up [animation-delay:0.8s]">
+              <SocialLink href="https://github.com" icon={<Github />} />
+              <SocialLink href="https://linkedin.com" icon={<Linkedin />} />
+              <SocialLink href="mailto:yusufsaputrah003@gmail.com" icon={<Mail />} />
             </div>
           </div>
 
-          {/* Right Content - Profile Image */}
-          <div className="flex-1 flex justify-center lg:justify-end animate-slide-up">
-            <div className="relative">
-              <div className="absolute inset-0 bg-primary/30 rounded-full blur-3xl animate-glow"></div>
-              <img
-                src={profileImage}
-                alt="Developer profile"
-                className="relative w-64 h-64 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-primary/50 shadow-2xl"
-              />
+          {/* Gambar Profil (tidak ada perubahan) */}
+          <div className="lg:col-span-2 flex justify-center items-center animate-fade-in [animation-delay:0.5s]">
+            <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/40 to-accent/40 rounded-[60%_40%_30%_70%/50%_30%_70%%_50%] animate-pulse-slow blur-2xl"></div>
+              <div className="relative w-full h-full overflow-hidden rounded-[60%_40%_30%_70%/50%_30%_70%_50%] border-2 border-primary/20 shadow-xl">
+                <img
+                  src={profileImage}
+                  alt="Yusuf Saputrah"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -95,5 +75,18 @@ const Hero = () => {
     </section>
   );
 };
+
+// Sub-component SocialLink
+const SocialLink = ({ href, icon }: { href: string, icon: React.ReactElement }) => (
+  // PERBAIKAN 2: Border di dark mode dibuat sedikit lebih cerah
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="p-3 rounded-full bg-card/50 backdrop-blur-sm border border-border dark:border-white/10 hover:bg-primary/10 hover:border-primary transition-all duration-300 group"
+  >
+    {React.cloneElement(icon, { className: "h-6 w-6 text-muted-foreground group-hover:text-primary transition-colors" })}
+  </a>
+);
 
 export default Hero;

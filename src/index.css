@@ -2,68 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system.
-  Light Mode colors are kept the same.
-  Dark Mode colors have been professionally redesigned for better aesthetics and readability.
-*/
-
 @layer base {
+  /* === LIGHT MODE REFACTORED === */
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222 47% 11%;
+    --background: 210 40% 98%; /* Soft off-white, not pure white */
+    --foreground: 222 47% 11%; /* Dark navy for text, softer than pure black */
 
-    --card: 0 0% 100%;
+    --card: 0 0% 100%; /* Pure white to make cards "pop" against the off-white background */
     --card-foreground: 222 47% 11%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
 
-    --primary: 221 83% 53%;
+    --primary: 221 83% 47%; /* A richer, slightly deeper blue */
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96%;
+    --secondary: 210 40% 96.1%;
     --secondary-foreground: 222 47% 11%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 221 83% 53%;
+    --accent: 221 83% 47%;
     --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 221 83% 53%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221 83% 47%;
 
     --radius: 0.75rem;
 
-    --gradient-hero: linear-gradient(135deg, hsl(221 83% 53% / 0.1) 0%, hsl(0 0% 100%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(221 83% 47% / 0.1) 0%, hsl(210 40% 98%) 100%);
     --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
-    --glow-primary: 0 0 40px hsl(221 83% 53% / 0.3);
-    --glow-hover: 0 0 20px hsl(221 83% 53% / 0.2);
+    --glow-primary: 0 0 40px hsl(221 83% 47% / 0.3);
+    --glow-hover: 0 0 20px hsl(221 83% 47% / 0.2);
   }
 
   /* === DARK MODE REFACTORED === */
   .dark {
-    --background: 222 84% 5%; /* Deep, dark navy blue */
-    --foreground: 210 40% 98%; /* Soft white */
+    --background: 222 84% 5%;
+    --foreground: 210 40% 98%;
 
-    --card: 222 83% 7%; /* Slightly lighter than background for elevation */
+    --card: 222 83% 7%;
     --card-foreground: 210 40% 98%;
 
     --popover: 222 83% 7%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 217 91% 60%; /* A more vibrant but professional blue */
-    --primary-foreground: 222 47% 11%; /* Dark text for high contrast on primary buttons */
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47% 11%;
 
     --secondary: 217 33% 17%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%; /* Lighter gray for muted text */
+    --muted-foreground: 215 20% 65%;
 
     --accent: 217 91% 60%;
     --accent-foreground: 210 40% 98%;
@@ -71,7 +67,7 @@
     --destructive: 0 63% 51%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217 33% 17%; /* Subtle but visible border */
+    --border: 217 33% 17%;
     --input: 217 33% 17%;
     --ring: 217 91% 60%;
 
@@ -89,6 +85,9 @@
 
   body {
     @apply bg-background text-foreground;
+    /* Tambahkan ini untuk pola dot grid */
+    background-image: radial-gradient(hsl(var(--muted-foreground) / 0.1) 1px, transparent 1px);
+    background-size: 20px 20px; /* Ukuran kotak perulangan, bisa disesuaikan */
   }
 }
 

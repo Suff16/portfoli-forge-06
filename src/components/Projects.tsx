@@ -1,39 +1,31 @@
+import React from 'react';
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "./ui/button";
 
-const Projects = () => {
-  const projects = [
+const projects = [
     {
       title: "LokaPandu",
-      description: "Full-stack aplikasi memberikan referensi destinasi wisata hidden gems terintegrasi dengan AI Chatbot.",
+      description: "Aplikasi full-stack yang memberikan referensi destinasi wisata hidden gems, terintegrasi dengan AI Chatbot.",
       image: "src/assets/Loka.png",
-      technologies: ["Flutter", "Supabase", "LLM Gemini Chat", "Provider Bloc"],
+      technologies: ["Flutter", "Supabase", "Gemini LLM", "Provider Bloc"],
       liveUrl: "#",
       githubUrl: "https://github.com/Suff16",
     },
     {
       title: "Food Recognizer App",
-      description: "Aplikasi Flutter dengan model ML untuk mengenali suatu makanan. Melalui pemberian gambar, aplikasi mampu mengidentifikasi jenis makanan tersebut dengan akurasi yang tinggi.",
+      description: "Aplikasi Flutter dengan model ML untuk mengenali makanan dari gambar dengan akurasi tinggi.",
       image: "src/assets/recognizer_food.png",
-      technologies: ["Flutter", "Firebase", "Gemini Api","ML Kit","Image Picker","Provider"],
+      technologies: ["Flutter", "Firebase", "Gemini API","ML Kit"],
       liveUrl: "#",
       githubUrl: "https://github.com/Suff16",
     },
     {
       title: "Restaurants App",
-      description: "Aplikasi Flutter yang menyediakan informasi lengkap tentang restoran, termasuk menu, ulasan, dan lokasi. Pengguna dapat menemukan restoran favorit mereka dan memesan makanan dengan mudah.",
+      description: "Aplikasi Flutter yang menyediakan informasi lengkap tentang restoran, dari menu, ulasan, hingga lokasi.",
       image: "src/assets/restaurant app.png",
       technologies: ["Flutter", "Firebase", "Google Maps API", "Provider"],
       liveUrl: "#",
       githubUrl: "#",
-    },
-    {
-      title: "AI Chatbot Platform",
-      description: "Platform chatbot cerdas dengan pemrosesan bahasa alami dan integrasi multi-kanal.",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
-      technologies: ["React", "Python", "OpenAI", "WebSocket"],
-      liveUrl: "#",
-      githubUrl: "https://github.com/Suff16",
     },
     {
       title: "Vegeta Store",
@@ -43,82 +35,89 @@ const Projects = () => {
       liveUrl: "#",
       githubUrl: "https://github.com/Suff16",
     }
-  ];
+];
 
+const Projects = () => {
   return (
-    <section id="projects" className="py-20 bg-background">
+    <section id="projects" className="py-24 bg-muted/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold mb-4 text-center">
-          <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            Proyek Unggulan
-          </span>
-        </h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Pameran karya terbaru dan proyek pribadi saya
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold tracking-tight">
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              Proyek Unggulan
+            </span>
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+            Pameran karya terbaru dan proyek-proyek yang telah saya kembangkan.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div
-              key={index}
-              className="group bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 animate-fade-in"
-              style={{ animationDelay: `${index * 150}ms` }}
-            >
-              <div className="relative overflow-hidden h-64">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent"></div>
-              </div>
-
-              <div className="p-6">
-                <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-foreground/80 mb-4">{project.description}</p>
-
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.technologies.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full border border-primary/20"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="flex gap-4">
-                  <Button
-                    variant="default"
-                    className="flex-1 bg-primary hover:bg-primary/90"
-                    asChild
-                  >
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Live Demo
-                    </a>
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="flex-1 border-primary/50 hover:bg-primary/10"
-                    asChild
-                  >
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github className="mr-2 h-4 w-4" />
-                      Code
-                    </a>
-                  </Button>
-                </div>
-              </div>
-            </div>
+            <ProjectCard key={index} project={project} index={index} />
           ))}
         </div>
       </div>
     </section>
   );
 };
+
+// --- Sub-Components untuk Kode yang Lebih Bersih ---
+
+const ProjectCard = ({ project, index }) => (
+  <div
+    className="group bg-card border border-border rounded-xl overflow-hidden flex flex-col transition-all duration-300 ease-out animate-fade-in-up hover:-translate-y-2 hover:shadow-xl hover:shadow-foreground/5"
+    style={{ animationDelay: `${index * 150}ms` }}
+  >
+    {/* Ukuran gambar diperkecil agar kartu lebih ringkas */}
+    <div className="relative overflow-hidden h-52">
+      <img
+        src={project.image}
+        alt={project.title}
+        className="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105"
+      />
+      {/* Gradasi hitam halus untuk menjaga kejelasan gambar */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+    </div>
+
+    {/* Padding & ukuran teks dikurangi untuk tampilan lebih rapi */}
+    <div className="p-5 flex flex-col flex-grow">
+      <h3 className="text-xl font-semibold mb-2 text-foreground transition-colors group-hover:text-primary">
+        {project.title}
+      </h3>
+      <p className="text-sm text-muted-foreground mb-4 flex-grow">{project.description}</p>
+      
+      <div className="flex flex-wrap gap-2 mb-5">
+        {project.technologies.map((tech) => (
+          <TechPill key={tech}>{tech}</TechPill>
+        ))}
+      </div>
+      
+      <ProjectLinks liveUrl={project.liveUrl} githubUrl={project.githubUrl} />
+    </div>
+  </div>
+);
+
+const TechPill = ({ children }) => (
+  <span className="px-2.5 py-0.5 bg-muted text-muted-foreground text-xs font-medium rounded-full">
+    {children}
+  </span>
+);
+
+const ProjectLinks = ({ liveUrl, githubUrl }) => (
+  <div className="flex gap-3 mt-auto">
+    <Button asChild size="sm" className="flex-1">
+      <a href={liveUrl} target="_blank" rel="noopener noreferrer">
+        <ExternalLink className="mr-2 h-4 w-4" />
+        Live Demo
+      </a>
+    </Button>
+    <Button asChild size="sm" variant="secondary" className="flex-1">
+      <a href={githubUrl} target="_blank" rel="noopener noreferrer">
+        <Github className="mr-2 h-4 w-4" />
+        Kode
+      </a>
+    </Button>
+  </div>
+);
 
 export default Projects;

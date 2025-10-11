@@ -7,17 +7,18 @@ import Timeline from "@/components/Timeline";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Certifications from "@/components/Certifications";
+import BackgroundGlow from "@/components/BackgroundGlow";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <BackgroundGlow />
       <Navigation />
       <Hero />
       <About />
       <Skills />
       <Projects />
       <Timeline />
-      <Certifications />
       <Contact />
       <Footer />
     </div>

@@ -9,7 +9,7 @@ const Projects = () => {
       image: "src/assets/project/Loka.png",
       technologies: ["Flutter", "Supabase", "LLM Gemini Chat", "Provider Bloc"],
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/Suff16",
     },
     {
       title: "Food Recognizer App",
@@ -17,24 +17,32 @@ const Projects = () => {
       image: "src/assets/project/recognizer_food.png",
       technologies: ["Flutter", "Firebase", "Gemini Api","ML Kit","Image Picker","Provider"],
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/Suff16",
     },
     {
-      title: "Social Media Dashboard",
-      description: "Analytics dashboard for social media management with data visualization and automated reporting.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-      technologies: ["Next.js", "TypeScript", "Supabase", "Chart.js"],
+      title: "Restaurants App",
+      description: "Aplikasi Flutter yang menyediakan informasi lengkap tentang restoran, termasuk menu, ulasan, dan lokasi. Pengguna dapat menemukan restoran favorit mereka dan memesan makanan dengan mudah.",
+      image: "src/assets/project/restaurant app.png",
+      technologies: ["Flutter", "Firebase", "Google Maps API", "Provider"],
       liveUrl: "#",
       githubUrl: "#",
     },
     {
       title: "AI Chatbot Platform",
-      description: "Intelligent chatbot platform with natural language processing and multi-channel integration.",
+      description: "Platform chatbot cerdas dengan pemrosesan bahasa alami dan integrasi multi-kanal.",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
       technologies: ["React", "Python", "OpenAI", "WebSocket"],
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/Suff16",
     },
+    {
+      title: "Vegeta Store",
+      description: "Platform e-commerce lengkap untuk menjual sayuran dengan integrasi pembayaran yang aman.",
+      image: "src/assets/project/vegeta store.png",
+      technologies: ["React", "Node.js", "Express", "MongoDB"],
+      liveUrl: "#",
+      githubUrl: "https://github.com/Suff16",
+    }
   ];
 
   return (
@@ -42,11 +50,11 @@ const Projects = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold mb-4 text-center">
           <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            Featured Projects
+            Proyek Unggulan
           </span>
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Showcase of my recent work and personal projects
+          Pameran karya terbaru dan proyek pribadi saya
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

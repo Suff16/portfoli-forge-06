@@ -28,25 +28,29 @@ const Hero = () => {
               </span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
-              Spesialisasi membangun aplikasi web dan aplikasi mobile multi platform-app dengan Flutter.
+              Memiliki pengalaman dalam membangun aplikasi web dan mobile multi platform-app dengan Flutter.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-lg px-8 py-6 group"
-              >
-                View My Work
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="text-lg px-8 py-6 border-primary/50 hover:bg-primary/10"
-              >
-                Contact Me
-              </Button>
+              <a href="src/assets/cv/CV Yusuf Saputrah.pdf" download="CV Yusuf Saputrah.pdf">
+                <Button
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-lg px-8 py-6 group"
+                >
+                  Unduh CV
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
+              <a href="#contact">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="text-lg px-8 py-6 border-primary/50 hover:bg-primary/10"
+                >
+                  Contact Me
+                </Button>
+              </a>
             </div>
+            
 
             {/* Social Links */}
             <div className="flex gap-4 justify-center lg:justify-start">

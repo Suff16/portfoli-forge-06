@@ -49,18 +49,18 @@ const Contact = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold mb-4 text-center">
           <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            Get In Touch
+            Mari Berkolaborasi
           </span>
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Have a project in mind or just want to say hi? Feel free to reach out!
+          Punya proyek atau sekadar ingin menyapa? Jangan ragu untuk menghubungi kami!
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Info */}
           <div className="space-y-8">
             <div className="bg-card border border-border rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-bold mb-6">Informasi Kontak</h3>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-primary/10 rounded-lg">
@@ -78,7 +78,7 @@ const Contact = () => {
                     <Phone className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium mb-1">Phone</p>
+                    <p className="font-medium mb-1">Telepon</p>
                     <a href="tel:+6287755567271" className="text-muted-foreground hover:text-primary transition-colors">
                       +6287755567271
                     </a>
@@ -89,7 +89,7 @@ const Contact = () => {
                     <MapPin className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium mb-1">Location</p>
+                    <p className="font-medium mb-1">Lokasi</p>
                     <p className="text-muted-foreground">Sidoarjo, Jawa Timur</p>
                   </div>
                 </div>
@@ -101,7 +101,7 @@ const Contact = () => {
           <div className="bg-card border border-border rounded-2xl p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
+                <label htmlFor="name" className="block text-sm font-medium mb-2">Nama</label>
                 <Input
                   id="name"
                   name="name"
@@ -109,7 +109,7 @@ const Contact = () => {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="Your name"
+                  placeholder="Nama lengkap"
                   className="bg-background border-border focus:border-primary"
                 />
               </div>
@@ -122,19 +122,19 @@ const Contact = () => {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="your.email@gmail.com"
+                  placeholder="contoh.email@gmail.com"
                   className="bg-background border-border focus:border-primary"
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
+                <label htmlFor="message" className="block text-sm font-medium mb-2">Pesan</label>
                 <Textarea
                   id="message"
                   name="message"
                   required
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Tell me about your project..."
+                  placeholder="Ceritakan tentang proyek Anda..."
                   rows={6}
                   className="bg-background border-border focus:border-primary resize-none"
                 />
@@ -144,7 +144,7 @@ const Contact = () => {
                 className="w-full bg-primary hover:bg-primary/90 text-lg py-6"
                 disabled={isSending}
               >
-                {isSending ? "Sending..." : "Send Message"}
+                {isSending ? "Mengirim..." : "Kirim Pesan"}
               </Button>
             </form>
           </div>

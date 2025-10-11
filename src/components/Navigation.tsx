@@ -19,11 +19,11 @@ const Navigation = () => {
   }, []);
 
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "Projects", path: "/#projects" },
+    { name: "Beranda", path: "/" },
+    { name: "Proyek Unggulan", path: "/#projects" },
     { name: "Timeline", path: "/#timeline" },
-    { name: "Certifications", path: "/certifications" },
-    { name: "Contact", path: "/#contact" },
+    { name: "Sertifikasi", path: "/certifications" },
+    { name: "Kontak", path: "/#contact" },
   ];
 
   return (
@@ -37,7 +37,7 @@ const Navigation = () => {
           <Link to="/" className="flex items-center space-x-2 group">
             <Code2 className="h-8 w-8 text-primary group-hover:animate-glow transition-all" />
             <span className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              DevPortfolio
+              Yusuf Saputrah
             </span>
           </Link>
 
@@ -63,7 +63,7 @@ const Navigation = () => {
               <span className="sr-only">Toggle theme</span>
             </Button>
             <Button variant="default" className="bg-primary hover:bg-primary/90">
-              Hire Me
+              Hubungi saya
             </Button>
           </div>
 
@@ -101,7 +101,7 @@ const Navigation = () => {
                 <span className="sr-only">Toggle theme</span>
               </Button>
               <Button variant="default" className="flex-1 bg-primary hover:bg-primary/90">
-                Hire Me
+                Hubungi saya
               </Button>
             </div>
           </div>

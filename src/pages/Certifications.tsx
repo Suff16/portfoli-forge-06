@@ -93,11 +93,11 @@ const CertificationsPage = () => {
           <div className="text-center mb-12">
             <h1 className="text-5xl font-bold mb-4">
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Certifications & Achievements
+                Sertifikasi & Prestasi
               </span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Professional certifications and continuous learning achievements
+              Sertifikasi profesional dan pencapaian pembelajaran berkelanjutan
             </p>
           </div>
 

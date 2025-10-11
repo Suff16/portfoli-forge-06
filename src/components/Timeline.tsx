@@ -131,7 +131,7 @@ const Timeline = () => {
                             onClick={() => toggleDescription(index)}
                             className="text-primary font-semibold mt-2 text-sm hover:underline"
                           >
-                            {isExpanded ? "Show Less" : "Show More"}
+                            {isExpanded ? "Tampilkan Lebih Sedikit" : "Tampilkan Lebih Banyak"}
                           </button>
                         </div>
                       ) : (

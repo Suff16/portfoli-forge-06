@@ -19,6 +19,9 @@ const skillsData = [
 ];
 
 const Skills = () => {
+  // Duplikasi data untuk menciptakan efek loop yang mulus
+  const extendedSkills = [...skillsData, ...skillsData];
+
   return (
     <section id="skills" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,21 +36,25 @@ const Skills = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-8 max-w-5xl mx-auto">
-          {skillsData.map((skill, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center justify-center text-center p-2 rounded-lg transition-all duration-300 hover:bg-card hover:shadow-lg hover:shadow-primary/10"
-            >
-              <img
-                src={skill.iconUrl}
-                alt={skill.name}
-                className="h-12 w-12 md:h-14 md:w-14 transition-transform duration-300 hover:scale-110"
-              />
-              <p className="mt-3 text-sm font-medium text-foreground/90">{skill.name}</p>
-            </div>
-          ))}
+        {/* Wrapper untuk marquee effect */}
+        <div className="relative w-full overflow-hidden group">
+          <div className="flex whitespace-nowrap animate-marquee group-hover:pause">
+            {extendedSkills.map((skill, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center justify-center text-center p-4 rounded-lg flex-shrink-0 mx-4 w-32"
+              >
+                <img
+                  src={skill.iconUrl}
+                  alt={skill.name}
+                  className="h-12 w-12 md:h-14 md:w-14 transition-transform duration-300 hover:scale-110"
+                />
+                <p className="mt-3 text-sm font-medium text-foreground/90">{skill.name}</p>
+              </div>
+            ))}
+          </div>
         </div>
+        
       </div>
     </section>
   );

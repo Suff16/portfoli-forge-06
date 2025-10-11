@@ -46,7 +46,7 @@ const Hero = () => {
                   variant="outline"
                   className="text-lg px-8 py-6 border-primary/50 hover:bg-primary/10"
                 >
-                  Contact Me
+                  Hubungi Saya
                 </Button>
               </a>
             </div>

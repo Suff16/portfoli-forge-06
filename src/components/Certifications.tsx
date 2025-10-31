@@ -3,7 +3,7 @@ import { Award, ArrowUpRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import dart from "../assets/dart.png";
-import flutterPemula from "../assets/flutter pemula.png";
+import flutterPemula from "../assets/flutter-pemula.png";
 import fundamentalFlutter from "../assets/fundamental-flutter.png";
 import machineLearning from "../assets/machine-learning.png";
 import express from "../assets/express.png";
@@ -20,7 +20,7 @@ const certifications = [
       verifyUrl: "https://www.dicoding.com/certificates/07Z6JL8VJXQR", 
     },
     {
-      name: "Membuat Aplikasi Flutter untuk Pemula", // Judul diperpanjang untuk tes
+      name: "Membuat Aplikasi Flutter untuk Pemula", 
       issuer: "Dicoding Indonesia",
       date: "2025",
       image: flutterPemula,

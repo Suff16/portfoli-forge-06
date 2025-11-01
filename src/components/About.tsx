@@ -1,4 +1,3 @@
-import React from 'react';
 import { Briefcase, Code, GraduationCap } from 'lucide-react';
 
 const About = () => {
@@ -12,15 +11,11 @@ const About = () => {
               Tentang Saya
             </span>
           </h2>
-          
-          <p className="text-xl text-muted-foreground mb-12">
-            Saya mengubah ide kompleks menjadi aplikasi yang elegan dan fungsional.
-          </p>
 
           <div className="bg-card/50 border border-border rounded-xl p-8 text-left backdrop-blur-sm animate-fade-in-up">
             <p className="text-lg text-foreground/90 leading-relaxed">
-              Sebagai seorang Mahasiswa Teknik Informatika, saya memiliki hasrat mendalam untuk pengembangan aplikasi lintas platform. Saya berfokus pada <SkillTag>Flutter</SkillTag> dan <SkillTag>Dart</SkillTag> untuk membangun aplikasi mobile yang mulus, serta mendalami ekosistem web modern dengan <SkillTag>React</SkillTag> dan <SkillTag>Vue.js</SkillTag>. Melalui pengalaman sebagai freelancer, saya terlatih untuk berkolaborasi secara efektif menggunakan <SkillTag>Git</SkillTag>, memecahkan masalah secara kreatif, dan terus beradaptasi dengan teknologi baru untuk memberikan hasil terbaik.
-            </p>
+              Saya adalah mahasiswa Teknik Informatika semester 5 yang berdedikasi dengan keseimbangan antara pengalaman kerja dan akademik. Terampil dalam pengembangan aplikasi mobile menggunakan <SkillTag>Flutter & Dart</SkillTag>, serta memiliki kemampuan kuat dalam problem solving, manajemen waktu, dan kolaborasi tim. Berpengalaman bekerja di lingkungan industri dan layanan teknis, saya terus mengasah kemampuan di bidang front-end development untuk menciptakan solusi digital yang efisien dan user-friendly.
+          </p>
           </div>
           
           <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8">

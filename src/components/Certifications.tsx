@@ -1,7 +1,5 @@
-import React from 'react';
 import { Award, ArrowUpRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import dart from "../assets/dart.png";
 import flutterPemula from "../assets/flutter-pemula.png";
 import fundamentalFlutter from "../assets/fundamental-flutter.png";
@@ -95,8 +93,6 @@ const CertificationsPage = () => {
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 };

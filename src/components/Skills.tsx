@@ -2,15 +2,13 @@ import React from 'react';
 
 // Data disederhanakan tanpa kategori, dengan flag 'invertInDark'
 const skillsData = [
+  { name: "HTML", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" },
+  { name: "CSS", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" },
   { name: "Flutter", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" },
   { name: "Dart", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" },
-  { name: "React", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
   { name: "Vue.js", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" },
-  { name: "PHP", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
   { name: "JavaScript", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-  { name: "Tailwind CSS", iconUrl:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
-  { name: "Node.js", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-  { name: "MongoDB", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+  { name: "Tailwind CSS", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
   { name: "Firebase", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
   { name: "Supabase", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" },
   { name: "Git", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", invertInDark: true },
@@ -33,7 +31,7 @@ const Skills = () => {
             Tumpukan teknologi yang saya gunakan untuk merancang dan membangun aplikasi.
           </p>
         </div>
-        
+
         {/* Layout diubah menjadi satu grid besar yang rapi */}
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-x-6 gap-y-10 max-w-5xl mx-auto">
           {skillsData.map((skill) => (
@@ -43,9 +41,8 @@ const Skills = () => {
                   src={skill.iconUrl}
                   alt={skill.name}
                   // PERBAIKAN: Menambahkan class 'dark:invert' secara kondisional
-                  className={`h-12 w-12 transition-transform duration-300 group-hover:scale-110 ${
-                    skill.invertInDark ? 'dark:invert' : ''
-                  }`}
+                  className={`h-12 w-12 transition-transform duration-300 group-hover:scale-110 ${skill.invertInDark ? 'dark:invert' : ''
+                    }`}
                 />
               </div>
               <p className="text-sm font-medium text-muted-foreground">{skill.name}</p>

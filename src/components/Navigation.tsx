@@ -22,11 +22,10 @@ const Navigation = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-out ${
-          isScrolled 
-            ? "bg-background/80 backdrop-blur-lg border-b border-border/50 shadow-sm" 
-            : "bg-transparent border-b border-transparent"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-out ${isScrolled
+          ? "bg-background/80 backdrop-blur-lg border-b border-border/50 shadow-sm"
+          : "bg-transparent border-b border-transparent"
+          }`}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
@@ -56,7 +55,6 @@ const navLinks = [
   { name: "Beranda", path: "/" },
   { name: "Proyek", path: "/#projects" },
   { name: "Timeline", path: "/#timeline" },
-  { name: "Sertifikasi", path: "/certifications" },
 ];
 
 const Logo = () => (
@@ -73,13 +71,12 @@ const DesktopNav = () => {
   const location = useLocation();
 
   const getLinkClass = (path) => {
-    const isActive = (path === '/' && location.pathname === '/' && location.hash === '') || 
-                     (path.startsWith('/#') && location.hash === path.substring(1));
-    return `relative px-3 py-2 rounded-lg transition-colors duration-300 ${
-      isActive
-        ? "text-primary font-medium"
-        : "text-muted-foreground hover:text-foreground"
-    }`;
+    const isActive = (path === '/' && location.pathname === '/' && location.hash === '') ||
+      (path.startsWith('/#') && location.hash === path.substring(1));
+    return `relative px-3 py-2 rounded-lg transition-colors duration-300 ${isActive
+      ? "text-primary font-medium"
+      : "text-muted-foreground hover:text-foreground"
+      }`;
   };
 
   return (
@@ -110,22 +107,20 @@ const DesktopNav = () => {
 
 const MobileMenuDrawer = ({ isOpen, setIsOpen }) => {
   const { theme, setTheme } = useTheme();
-  
+
   return (
     <>
       {/* Backdrop (latar belakang redup) */}
-      <div 
+      <div
         onClick={() => setIsOpen(false)}
-        className={`fixed inset-0 bg-black/40 backdrop-blur-sm z-40 transition-opacity duration-300 md:hidden ${
-          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-        }`}
+        className={`fixed inset-0 bg-black/40 backdrop-blur-sm z-40 transition-opacity duration-300 md:hidden ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+          }`}
       />
-      
+
       {/* Panel Menu yang menggeser */}
       <div
-        className={`fixed top-0 right-0 h-full w-4/5 max-w-xs bg-background border-l border-border z-50 transition-transform duration-300 ease-in-out md:hidden ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed top-0 right-0 h-full w-4/5 max-w-xs bg-background border-l border-border z-50 transition-transform duration-300 ease-in-out md:hidden ${isOpen ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         <div className="flex flex-col h-full">
           <div className="p-4 flex justify-between items-center border-b border-border">

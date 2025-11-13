@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 import lokaPandu from "../assets/Loka.png";
 import recognizerFood from "../assets/recognizer_food.png";
 import restaurantApp from "../assets/restaurant-app.png";
-import vegetaStore from "../assets/Vegeta-store.png";
+import vegetaStore from "../assets/pengaduan_masyarakat.png";
 
 const projects = [
   {
@@ -32,11 +32,11 @@ const projects = [
     githubUrl: "#",
   },
   {
-    title: "Vegeta Store",
-    description: "Platform e-commerce lengkap untuk menjual sayuran.",
+    title: "Pengaduan Masyarakat",
+    description: "Web desa Pengaduan Masyarakat",
     image: vegetaStore,
-    technologies: ["React", "Bootstrap"],
-    liveUrl: "#",
+    technologies: ["Vue.js", "Bootstrap"],
+    liveUrl: "https://web-service-uas.vercel.app",
     githubUrl: "https://github.com/Suff16",
   }
 ];

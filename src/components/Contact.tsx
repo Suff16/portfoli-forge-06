@@ -31,17 +31,17 @@ const Contact = () => {
       formData,
       'SGLsgBNCbWT16owOI'       // <-- Ganti dengan Public Key Anda
     )
-    .then((result) => {
+      .then((result) => {
         console.log('SUCCESS!', result.text);
         toast.success("Message sent successfully! I'll get back to you soon.");
         setFormData({ name: "", email: "", message: "" });
-    }, (error) => {
+      }, (error) => {
         console.log('FAILED...', error.text);
         toast.error("Failed to send message. Please try again later.");
-    })
-    .finally(() => {
-      setIsSending(false);
-    });
+      })
+      .finally(() => {
+        setIsSending(false);
+      });
   };
 
   return (
@@ -73,17 +73,7 @@ const Contact = () => {
                     </a>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-primary/10 rounded-lg">
-                    <Phone className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-medium mb-1">Telepon</p>
-                    <a href="tel:+6287755567271" className="text-muted-foreground hover:text-primary transition-colors">
-                      +6287755567271
-                    </a>
-                  </div>
-                </div>
+
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-primary/10 rounded-lg">
                     <MapPin className="h-6 w-6 text-primary" />

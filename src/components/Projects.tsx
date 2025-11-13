@@ -7,38 +7,38 @@ import restaurantApp from "../assets/restaurant-app.png";
 import vegetaStore from "../assets/Vegeta-store.png";
 
 const projects = [
-    {
-      title: "LokaPandu",
-      description: "Aplikasi full-stack yang memberikan referensi destinasi wisata hidden gems, terintegrasi dengan AI Chatbot.",
-      image: lokaPandu, 
-      technologies: ["Flutter", "Supabase", "Gemini LLM", "Provider Bloc"],
-      liveUrl: "#",
-      githubUrl: "https://github.com/Suff16",
-    },
-    {
-      title: "Food Recognizer App",
-      description: "Aplikasi Flutter dengan model ML untuk mengenali makanan dari gambar dengan akurasi tinggi.",
-      image: recognizerFood, 
-      technologies: ["Flutter", "Firebase", "Gemini API","ML Kit"],
-      liveUrl: "#",
-      githubUrl: "https://github.com/Suff16",
-    },
-    {
-      title: "Restaurants App",
-      description: "Aplikasi Flutter yang menyediakan informasi lengkap tentang restoran, dari menu, ulasan, hingga lokasi.",
-      image: restaurantApp, 
-      technologies: ["Flutter", "Firebase", "Google Maps API", "Provider"],
-      liveUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      title: "Vegeta Store",
-      description: "Platform e-commerce lengkap untuk menjual sayuran dengan integrasi pembayaran yang aman.",
-      image: vegetaStore, 
-      technologies: ["React", "Node.js", "Express", "MongoDB"],
-      liveUrl: "#",
-      githubUrl: "https://github.com/Suff16",
-    }
+  {
+    title: "LokaPandu",
+    description: "Aplikasi full-stack yang memberikan referensi destinasi wisata hidden gems, terintegrasi dengan AI Chatbot.",
+    image: lokaPandu,
+    technologies: ["Flutter", "Supabase", "Gemini LLM", "Provider Bloc"],
+    liveUrl: "https://youtu.be/RqxbJF3nLrk?si=RTzbt0jsDavxqdZx",
+    githubUrl: "https://github.com/Suff16",
+  },
+  {
+    title: "Food Recognizer App",
+    description: "Aplikasi Flutter dengan model ML untuk mengenali makanan dari gambar dengan akurasi tinggi.",
+    image: recognizerFood,
+    technologies: ["Flutter", "Firebase", "Gemini API", "ML Kit"],
+    liveUrl: "#",
+    githubUrl: "https://github.com/Suff16",
+  },
+  {
+    title: "Restaurants App",
+    description: "Aplikasi Flutter yang menyediakan informasi lengkap tentang restoran, dari menu, ulasan, hingga lokasi.",
+    image: restaurantApp,
+    technologies: ["Flutter", "Firebase", "Google Maps API", "Provider"],
+    liveUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    title: "Vegeta Store",
+    description: "Platform e-commerce lengkap untuk menjual sayuran.",
+    image: vegetaStore,
+    technologies: ["React", "Bootstrap"],
+    liveUrl: "#",
+    githubUrl: "https://github.com/Suff16",
+  }
 ];
 
 const Projects = () => {
@@ -89,13 +89,13 @@ const ProjectCard = ({ project, index }) => (
         {project.title}
       </h3>
       <p className="text-sm text-muted-foreground mb-4 flex-grow">{project.description}</p>
-      
+
       <div className="flex flex-wrap gap-2 mb-5">
         {project.technologies.map((tech) => (
           <TechPill key={tech}>{tech}</TechPill>
         ))}
       </div>
-      
+
       <ProjectLinks liveUrl={project.liveUrl} githubUrl={project.githubUrl} />
     </div>
   </div>
